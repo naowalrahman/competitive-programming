@@ -25,4 +25,4 @@ def binary_search(arr, target):
     return -1
 
 print('Binary search:')
-print(binary_search(arr, 5))
+print(binary_search(arr, 11))
