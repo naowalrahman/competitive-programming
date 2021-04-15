@@ -25,4 +25,3 @@ def quicksort(arr, low, high):
 array = [11, 9, 29, 7, 2, 15, 28]
 quicksort(array, 0, len(array) - 1)
 print(array) 
-
