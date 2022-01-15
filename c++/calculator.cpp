@@ -1,10 +1,18 @@
 #include <iostream>
 using namespace std;
 
+/**
+ * @brief Based on the index of operation inp,
+ * perform the corresponding operations on num1 and num2. 
+ * 
+ * @param inp  determines operation to be performed
+ * @param num1 first number input
+ * @param num2 second number input
+ * @return double 
+ */
 double calc(int inp, double num1, double num2) {
     double result;
-
-    
+   
     if (inp == 1)
     {
         result = num1 + num2;
