@@ -1,5 +1,11 @@
 {
     "files.associations": {
-        "*.tcc": "cpp"
-    }
+        "*.tcc": "cpp",
+        "typeinfo": "cpp",
+        "ostream": "cpp",
+        "iostream": "cpp",
+        "string": "cpp",
+        "istream": "cpp"
+    },
+    "C_Cpp.intelliSenseEngineFallback": "Disabled"
 }
