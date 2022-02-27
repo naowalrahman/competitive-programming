@@ -23,6 +23,6 @@ class stack:
             return False 
 
 if __name__ == '__main__': 
-    stack = stack()
+    my_stack = stack()
 
 

@@ -5,7 +5,8 @@
         "ostream": "cpp",
         "iostream": "cpp",
         "string": "cpp",
-        "istream": "cpp"
+        "istream": "cpp",
+        "iosfwd": "cpp"
     },
     "C_Cpp.intelliSenseEngineFallback": "Disabled"
 }
