@@ -3,31 +3,17 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/**",
-                "/usr/include/c++/11.1.0/tr1",
-                "/usr/include/linux"
-            ],
-            "defines": [],
-            "compilerPath": "/usr/sbin/gcc",
-            "cStandard": "c17",
-            "cppStandard": "c++17",
-            "intelliSenseMode": "linux-gcc-x64",
-            "compilerArgs": [
-                "-std=c++17",
-                "-O2",
-                "-Wall"
-            ]
-        },
-        {
-            "name": "main",
-            "includePath": [
                 "${workspaceFolder}/**"
             ],
             "defines": [],
-            "compilerPath": "/usr/sbin/gcc",
+            "compilerPath": "/usr/bin/g++",
             "cStandard": "gnu17",
-            "cppStandard": "c++17",
-            "intelliSenseMode": "linux-gcc-x64"
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-x64",
+            "compilerArgs": [
+                "-O2",
+                "-Wall"
+            ]
         }
     ],
     "version": 4
