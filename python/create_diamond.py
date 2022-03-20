@@ -12,12 +12,14 @@ def diamond(width: int):
         stars = i * "*"
         lines.insert(0, spaces + stars + spaces)
         lines.append(spaces + stars + spaces)
-    for i in range(len(lines)):
-        spaced_out = "".join([s + " " for s in list(lines[i])])
-        lines[i] = spaced_out
+    # # use to space out the stars
+    # for i in range(len(lines)):
+    #     spaced_out = "".join([s + " " for s in list(lines[i])])
+    #     lines[i] = spaced_out
     return "\n".join(lines)
 
-print(diamond(7))
+print(diamond.__doc__)
+print(diamond(int(input())))
 
 # # alternative way to do it unevenly
 # width = int(input("Width: "))
