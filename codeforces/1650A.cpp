@@ -6,6 +6,16 @@ int main() {
     cin.tie(0);
 
     int t; cin >> t;
+    for(int i = 0, i < t; i++) {
+        // s.length() is odd
+        string s; cin >> s;
+        string c; cin >> c;
+        
+    }
+    return 0;
+}
+
+    int t; cin >> t;
     while(t--) {
         // length of s is odd
         string s; cin >> s;
