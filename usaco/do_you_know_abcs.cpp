@@ -12,7 +12,7 @@ int main() {
     int abc_sum = *mx;
     vals.erase(mx);
     auto a_it = min_element(vals.begin(), vals.end());
-    int a = *a_it; 
+    int a = *a_it;
     vals.erase(a_it);
     int bc_sum = abc_sum - a;
     vector<int> two_sums(3);
@@ -20,7 +20,7 @@ int main() {
         for(int j = i + 1; j < vals.size(); j++) {
             for(int k = j + 1; k < vals.size(); k++) {
                 if(vals[i] + vals[j] + vals[k] == 2 * abc_sum) {
-                    two_sums = {vals[i], vals[j], vals[k]};
+                    two_sums = { vals[i], vals[j], vals[k] };
                 }
             }
         }
