@@ -26,4 +26,3 @@ for i in range(num_cases):
         print("YES")
 
 
-    
