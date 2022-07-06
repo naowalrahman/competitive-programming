@@ -1,5 +1,5 @@
 ---
-Checks:          '-*,clang-diagnostic-*,-clang-diagnostic-unused-value,clang-analyzer-*,bugprone-*,performance-*,'
+Checks:          '-*,clang-diagnostic-*,-clang-diagnostic-unused-value,clang-analyzer-*,bugprone-*,performance-*,-bugprone-macro-parentheses'
 HeaderFilterRegex: ''
 WarningsAsErrors: '*'
 AnalyzeTemporaryDtors: false
