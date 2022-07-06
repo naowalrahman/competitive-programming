@@ -8,7 +8,7 @@ while True:
     command_inp = input()
     if str(command_inp) == "pls search":
         search_list = ["couch", "bed", "bank", "air", "tree", "attic", "street", "area51"]
-        current_search = {random.choice(search_list), random.choice(search_list), random.choice(search_list)}
+        current_search = list({random.choice(search_list), random.choice(search_list), random.choice(search_list)})
         search_inp = input("Where do you want to search?\nyou can search in the " + current_search[0] + ", " + current_search[1] + ", or " + current_search[2] + " >> ")
         if search_inp in current_search:
             earned = random.randint(69, 1783)
