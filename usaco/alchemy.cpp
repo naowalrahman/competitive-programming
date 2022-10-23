@@ -23,7 +23,6 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
     // dbg();
-    
 
     int n; cin >> n;
     vi have(n);
