@@ -2,8 +2,8 @@
 using namespace std;
 
 int main() {
-    // ifstream cin("speeding.in");
-    // ofstream cout("speeding.out");
+    ifstream cin("speeding.in");
+    ofstream cout("speeding.out");
 
     int n, m, x = 0, segLength, speed; cin >> n >> m;
     vector<int> roadSpeed(100), bessieSpeed(100);
