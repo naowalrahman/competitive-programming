@@ -11,27 +11,22 @@ int main() {
         }
     }
 
-
-    int q, n, primeFactors; cin >> q;
+    int q, n;
+    cin >> q;
     while(q--) {
-        primeFactors = 0;
         cin >> n;
-        // for(int i = 0; i <= n; i++) cout << sieve[i] << ", ";
-        // cout << "\n";
-        int temp = 0;
-        int ans = 1;
-        int prevFactor = sieve[n];
+        int temp = 0, ans = 1, prevFactor = sieve[n], currFactor;
         while(n > 1) {
-            int currFactor = sieve[n];
+            currFactor = sieve[n];
             if(currFactor != prevFactor) {
                 ans *= temp + 1;
                 temp = 0;
             }
             ++temp;
+
+            if(currFactor == 0) break;
             n /= currFactor;
             prevFactor = currFactor;
-            // cout << sieve[n] << ", ";
-
         }
         cout << ans * (temp + 1) << "\n";
     }
