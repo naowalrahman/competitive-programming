@@ -2,6 +2,8 @@
 using namespace std;
 
 int main() {
+    cin.tie(0)->sync_with_stdio(0);
+
     int n, t; cin >> n >> t;
     vector<int> books(n);
     for(auto&x:books) cin >> x;
@@ -12,5 +14,6 @@ int main() {
         while(right < n && curr_time <= t - books[right]) curr_time += books[right++];
         ans = max(ans, right - left); 
     }
+    
     cout << ans;
 }
