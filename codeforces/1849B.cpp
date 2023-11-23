@@ -1,47 +1,46 @@
 /**
- * @file 1849B.cpp
- * @author Naowal Rahman
- * @date 2023-07-27 23:31
+ * @author      : Naowal Rahman
+ * @created     : 07/28/2023 06:50:32 PM
+ * @filename    : 1849B
  */
 
 #include <bits/stdc++.h>
 using namespace std;
-#define all(x) x.begin(), x.end()
+using vi = vector<int>;
+using ll = long long;
+using pii = pair<int, int>;
 #define FOR(i, s, e) for(int i = s; i < e; i++)
 #define FORE(i, s, e) for(int i = s; i <= e; i++)
-typedef long long ll;
-typedef vector<int> vi;
-typedef pair<int, int> pii;
-
-inline void dbg() {
-    #ifndef ONLINE_JUDGE
-    freopen("../input.txt", "r", stdin);
-    freopen("../output.txt", "w", stdout);
-    #endif //
-}
+#define all(x) (x).begin(), (x).end()
+#define sz(x) (int)x.size()
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(0);
-    dbg();
+    cin.tie(0) -> sync_with_stdio(0);
 
-    int t, n, k, x; cin >> t;
+    int t; cin >> t;
     while(t--) {
+        int n, k, x;
         cin >> n >> k;
-        set<pii, bool (*)(const pii &, const pii &)> a([](const pii& x, const pii& y) {
-            if(x.first == y.first) return x.second < y.second;
-            else return x.first > y.first;
-        });
-
+        vi zeroes;
+        vector<pii> nzeroes;
         FOR(i, 0, n) {
             cin >> x;
-            a.insert() 
+            x %= k;
+            if(x) nzeroes.push_back({x, i+1});
+            else zeroes.push_back(i+1);
         }
 
+        sort(all(zeroes));
+        sort(all(nzeroes), [](pii& p, pii& q) {
+            if(p.first == q.first) return p.second < q.second;
+            return p.first > q.first; 
+        });
 
-        for(auto& p : a) cout << p.second << " "; 
+        for(int i : zeroes) cout << i << " ";
+        for(auto p : nzeroes) cout << p.second << " ";
         cout << "\n";
-    } 
+    }
 
     return 0;
 }
+
