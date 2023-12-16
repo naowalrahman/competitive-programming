@@ -1,30 +1,43 @@
 /**
- * @file 1661.cpp
- * @author Naowal Rahman
- * @date 2023-06-07 15:28
+ * @author      : Naowal Rahman
+ * @created     : 03/08/2023 06:16:43 PM
+ * @filename    : 1661
  */
 
 #include <bits/stdc++.h>
+#include <numeric>
 using namespace std;
 
-#define int long long
-
-signed main() {
+int main() {
     ios::sync_with_stdio(false);
-    cin.tie(0);
+    cin.tie(nullptr);
 
-    int n, x; cin >> n >> x;
+    int n, x;
+    cin >> n >> x;
     vector<int> arr(n);
-    for(auto &a : arr) cin >> a;
+    for (auto& x : arr)
+        cin >> x;
 
-    int sum = 0, ans = 0;
     map<int, int> mp;
-    mp[0] = 1;
-    for(int i = 0; i < n; i++) {
-        sum += arr[i];
-        ans += mp[sum - x];
-        mp[sum]++;
+    vector<int> pfx(n + 1);
+    partial_sum(arr.begin(), arr.end(), ++pfx.begin());
+    for (int num : pfx) {
+        mp[num]++;
+    }
+
+    int a, ac, ans = 0;
+    for (int num : pfx) {
+        a = mp[num], ac = mp[x - num];
+        if (a && ac)
+            ans += min(a, ac);
     }
 
     cout << ans;
+
+    /*
+     *   2 -1 3 5 -2
+     * 0 2  1 4 9  7
+     */
+
+    return 0;
 }

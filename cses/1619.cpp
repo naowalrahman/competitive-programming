@@ -2,54 +2,24 @@
 using namespace std;
 
 #define all(x) x.begin(), x.end()
-typedef pair<int, int> Time;
-bool ycomp(Time t1, Time t2) {
-    return t1.second < t2.second; 
-}
-
-void printTime(Time &t) {
-    cout << "(" << t.first << ", " << t.second << ")";
-}
-
-void printTimeVect(vector<Time> &v) {
-    for(Time t : v) {
-        printTime(t);
-        cout << ", ";
-    }
-    cout << "\n";
-}
 
 int main() {
-    int n; cin >> n;
-    vector<Time> times(n);
-    for(int i = 0; i < n; i++) cin >> times[i].first >> times[i].second;
-    printTimeVect(times);
+    int n, s, e; cin >> n;
+    vector<pair<int, int>> times;
+    for(int i = 0; i < n; i++) {
+        cin >> s >> e;
+        times.push_back({s, 1});
+        times.push_back({e, -1});
+    }
 
     sort(all(times));
-    printTimeVect(times);
-    for(int i = 0; i < n; i++) {
-        times[i].second = times[i].second - times[i].first + i+1;
-        times[i].first = i+1;
-    }
-    printTimeVect(times);
-    // sort(all(times), ycomp);
-    // printTimeVect(times);
-    // for(int i = 0; i < n; i++) times[i].second = i+1;
-    // printTimeVect(times);
+    
+    vector<int> change(2*n);
+    for(int i = 0; i < 2*n; i++) change[i] = times[i].second;
 
+    vector<int> pfx(2*n+1);
+    partial_sum(all(change), pfx.begin()+1);
+    cout << *max_element(all(pfx)) << "\n";
 
-
-    vector<int> ppl(n+1);
-    for(Time t : times) {
-        ppl[t.first] = 1;
-        if(t.second <= n) ppl[t.second] = -1;
-    }
-    for(int i = 1; i <= n; i++) ppl[i] += ppl[i-1];
-    int ans = 0;
-    for(int p : ppl) {
-        ans = max(ans, p);
-        cout << p << " ";
-    }
-    cout << ans << "\n";
-
+    return 0;
 }

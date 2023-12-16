@@ -3,6 +3,15 @@ This repository is used to store files of code that I have for competitive progr
 
 It is not dedicated to a particular project, but rather as a store for files of code that I use on multiple machines, so as to allow synchronization. 
 
+## Programming Contests/Websites Included:
+* Cornell High School Programming Contest
+* PClassic
+* Traverse CS
+* USACO
+* CodeForces
+* AtCoder
+* CSES
+
 ## Setting up `git` for easy access
 ```sh
 git config --global user.name "Naowal Rahman"
