@@ -1,17 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
+#define int long long
 
-int main() {
-	cin.tie(0)->sync_with_stdio(0);
-	ifstream cin("lemonade.in");
-	ofstream cout("lemonade.out");
-
+signed main() {
 	int n; cin >> n;
-	vector<int> w(n);
-	for(auto&x:w) cin >> x;
+	vector<int> arr(n);
+	for(auto&x:arr) cin >> x;
 
-	sort(w.begin(), w.end(), greater<int>());
-	int i = 0;
-	while(i < n && i <= w[i]) ++i;
-	cout << i;
+	sort(arr.begin(), arr.end());
+
+	int cost = 0;
+	for(int i : arr) cost += abs(arr[n/2] - i);
+
+	cout << cost;
 }
