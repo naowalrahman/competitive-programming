@@ -19,8 +19,8 @@ void solve() {
     string ans = "NO";
     map<int, int> m;
     for(int i = 0; i <= n; i++) m[peven[i] - podd[i]]++;
-    for(auto itr = m.begin(); itr != m.end(); ++itr) {
-        if(itr->second >= 2) {
+    for(auto p : m) {
+        if(p.second >= 2) {
             ans = "YES";
             break;
         }
