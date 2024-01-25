@@ -45,6 +45,7 @@ signed main() {
     }
 
     sort(all(falls));
+    dbg(falls, n);
 
     int curr_bones = k;
     FOR(i, 0, p) {
