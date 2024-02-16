@@ -1,8 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
-#define int long long
-
 template<typename T>
 int SIZE(T (&t)){
     return t.size();
