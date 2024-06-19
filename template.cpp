@@ -1,7 +1,7 @@
 /**
  * @file template.cpp
  * @author Naowal Rahman
- * @date 2024-01-05 14:27
+ * @date 2024-06-18 23:59
  */
 
 #include <bits/stdc++.h>
@@ -31,9 +31,17 @@ using pii = pair<int, int>;
 #define ROF(i,a,b) for (int i = (b)-1; i >= (a); --i)
 #define R0F(i,a) ROF(i,0,a)
 
+const auto _start_time = chrono::high_resolution_clock::now();
+void timer() {
+    auto _end_time = chrono::high_resolution_clock::now();
+    chrono::duration<double, milli> diff = _end_time - _start_time;
+    cerr << "Time Taken: " << diff.count() << " ms\n";
+}
+
 signed main() {
     cin.tie(0)->sync_with_stdio(0);
 
+    timer();
     return 0;
 }
 
