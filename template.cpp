@@ -8,7 +8,7 @@
 using namespace std;
 
 #pragma GCC optimize("Ofast,unroll-loops")
-#pragma GCC target("avx2,bmi,bmi2,lzcnt,popcnt,tune=native")
+#pragma GCC target("avx2,bmi,bmi2,lzcnt,popcnt")
 
 #ifndef ONLINE_JUDGE
 #include "/home/naowal/Desktop/code/competitive-programming/debug.h"
