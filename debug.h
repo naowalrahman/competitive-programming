@@ -1,6 +1,6 @@
 template<typename T>
 int SIZE(T (&t)){
-    return t.size();
+    return (int)t.size();
 }
 
 template<typename T, size_t N>
@@ -86,6 +86,13 @@ template<typename Heads, typename... Tails>
 void dbgr(Heads H, Tails... T){
     cout << to_string(H) << '\n';
     dbgr(T...);
+}
+
+const auto _start_time = chrono::high_resolution_clock::now();
+void timer() {
+    auto _end_time = chrono::high_resolution_clock::now();
+    chrono::duration<double, milli> diff = _end_time - _start_time;
+    cerr << "\nTime Taken: " << diff.count() << " ms\n";
 }
 
 #define COLOR "\033[91m"
